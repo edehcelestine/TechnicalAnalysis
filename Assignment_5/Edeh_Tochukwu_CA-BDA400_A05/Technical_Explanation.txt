@@ -1,0 +1,37 @@
+================================================================================
+          BDA400 ASSIGNMENT 5: TECHNICAL ANALYSIS ALGORITHM REPORT
+================================================================================
+STUDENT NAME: Edeh Tochukwu celestine
+COURSE CODE:  BDA400 - Data Science Tools and Techniques
+
+1. COMPONENT ALGORITHM DESIGN SUMMARIES
+--------------------------------------------------------------------------------
+* Simple Moving Average (sma): Implemented via a basic rolling window algorithm loop.
+  The mathematical vector boundary handles sequence subsets by tracking start/end rows
+  without requiring external time-series data structures.
+
+* Exponential Moving Average (ema): Employs a recursive logic pipeline where the active
+  smoothing weight multiplier '2 / (period + 1)' dynamically scores the current index price 
+  against the previous day's calculated state.
+
+* Moving Average Convergence Divergence (macd): Programmed as an structural composition layer.
+  It references our standalone ema() logic twice to calculate short and long vector variances,
+  deriving lines and histograms via list collections.
+
+* Standard Deviation (stdev): Built completely out of arithmetic loops. It explicitly avoids
+  R's native variance scripts, iterating elements manually to aggregate deviation sums, 
+  variance thresholds, and root distributions.
+
+* Linear Regression (linreg): Implements least-squares parameters calculation manually. It 
+  extracts index values matrices against coordinate ranges to derive slope and intercept 
+  variables safely.
+
+* Relative Strength Index (rsi): Captures directional price changes using Wilder's smoothing
+  technique. Tracks structural gains versus absolute value losses inside data arrays.
+
+* Stochastic RSI (stoch_rsi): Normalizes underlying momentum metrics between structural boundaries
+  of 0 and 1, linking our rsi() and sma() functions cleanly into a multi-tiered array loop.
+
+* Crossover/Crossunder Functions: Evaluate active index states against historical lags (i-1) 
+  to output strict structural signal vectors matching directional momentum breakout flags.
+================================================================================
